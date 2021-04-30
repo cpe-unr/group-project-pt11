@@ -1,5 +1,5 @@
 /**
- * @file echo.h
+ * @file processor.cpp
  * @author Zach Poole
  * @brief 
  * @version 0.1
@@ -9,8 +9,5 @@
  * 
  */
 
-#ifndef ECHO_H
-#define ECHO_H
-
-
-#endif
+#include "processor.h"
+#include <iostream>

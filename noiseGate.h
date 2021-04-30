@@ -1,5 +1,5 @@
 /**
- * @file echo.h
+ * @file noiseGate.h
  * @author Zach Poole
  * @brief 
  * @version 0.1
@@ -9,8 +9,8 @@
  * 
  */
 
-#ifndef ECHO_H
-#define ECHO_H
+#ifndef NOISE_GATE_H
+#define NOISE_GATE_H
 
 
 #endif

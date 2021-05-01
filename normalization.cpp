@@ -11,3 +11,5 @@
 
 #include "normalization.h"
 #include <iostream>
+
+Normalization::~Normalization() {};

@@ -68,6 +68,10 @@ public:
   template<typename bufferType>
   void processEcho(bufferType *buffer, int bufferSize) {
 
+
+    // TODO : negative values work, but positive doesn't really seem to be in the echo
+    //maybe split into a positive and negative section like the noise gate and normalization are
+
     bufferType maxValue = std::numeric_limits<buffer_type>::max();
 
     std::cout << maxValue << std::endl;

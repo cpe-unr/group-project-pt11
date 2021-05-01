@@ -10,4 +10,5 @@
  */
 
 #include "noiseGate.h"
-#include <iostream>
+
+NoiseGate::~NoiseGate() {};

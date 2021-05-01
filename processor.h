@@ -11,6 +11,15 @@
 
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
+#include "echo.h"
+#include "noiseGate.h"
+#include "normalization.h"
+
+class Processor : public NoiseGate, Echo, Normalization {
+
+
+
+};
 
 
 #endif

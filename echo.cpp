@@ -10,4 +10,10 @@
  */
 
 #include "echo.h"
-#include <iostream>
+
+
+Echo::Echo(int sampleDelay) : sampleDelay(sampleDelay) {};
+
+
+Echo::~Echo() {};
+

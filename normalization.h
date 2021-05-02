@@ -50,9 +50,10 @@ public:
 
 
     // TODO : all of this math needs to be redone
-    bufferType highestAllowedValue = std::numeric_limits<bufferType>::max() * 0.75;
+    // actually I think I was right the first time
+    bufferType highestAllowedValue = std::numeric_limits<bufferType>::max();
+    
     bufferType highestValue = std::numeric_limits<bufferType>::max() / 2;
-
     for(int i = 0; i < bufferSize; i++) {
       if(buffer[i] > highestValue) {
         highestValue = buffer[i];
@@ -62,11 +63,11 @@ public:
     bufferType zeroAudioValue = std::numeric_limits<bufferType>::max() / 2;
     bufferType lowestValue = std::numeric_limits<bufferType>::max() - highestValue;
 
-    float multiplyConst = float(highestAllowedValue / highestValue);
+    float multiplyConst = float(highestAllowedValue) / float(highestValue);
     
 
-    std::cout << float(multiplyConst) << std::endl;
-    std::cout << int(0.75) << std::endl;
+    std::cout << multiplyConst << std::endl;
+    //std::cout << int(0.75) << std::endl;
 
 
     for(int i = 0; i < bufferSize; i++) {

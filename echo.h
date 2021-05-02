@@ -29,6 +29,7 @@ protected:
 
 public: 
 
+
   /**
    * @brief Construct a new Echo object
    * 
@@ -56,7 +57,7 @@ public:
 
 
   /**
-   * @brief add the echo (echo, echo)
+   * @brief Adds the echo (echo, echo) (mono)
    * 
    * @tparam bufferType 
    * @param buffer 
@@ -64,9 +65,10 @@ public:
    * 
    * This program creates an echo by adding together an older buffer value with one further in the file, 
    * then making sure it's not blasting the volume by limiting the value with the maximum allowable value in the specified type.
+   * This is the mono version of the echo.
    */
   template<typename bufferType>
-  void processEcho(bufferType *buffer, int bufferSize) {
+  void processEchoMono(bufferType *buffer, int bufferSize) {
 
 
     // TODO : negative values work, but positive doesn't really seem to be in the echo
@@ -83,6 +85,43 @@ public:
         buffer[i] = ((buffer[i] - ((maxValue) / 2)) *2 ) + ((maxValue) / 2);
 
         buffer[i] = ((buffer[i] + buffer[i - sampleDelay]) * 0.5);
+
+      }
+
+    }
+
+  }
+
+
+  /**
+   * @brief Adds the echo (echo, echo) (stereo)
+   * 
+   * @tparam bufferType 
+   * @param buffer 
+   * @param bufferSize 
+   * 
+   * This program creates an echo by adding together an older buffer value with one further in the file, 
+   * then making sure it's not blasting the volume by limiting the value with the maximum allowable value in the specified type.
+   * This is the stereo version of the echo.
+   */
+  template<typename bufferType>
+  void processEchoStereo(bufferType *buffer, int bufferSize) {
+
+    bufferType maxValue = std::numeric_limits<buffer_type>::max();
+
+    std::cout << maxValue << std::endl;
+
+    for(int i = sampleDelay; i < bufferSize; i + 2) {
+
+      if(((buffer[i] + buffer[i-sampleDelay]) < maxValue)) {
+
+        buffer[i] = ((buffer[i] - ((maxValue) / 2)) *2 ) + ((maxValue) / 2);
+
+        buffer[i] = ((buffer[i] + buffer[i - sampleDelay]) * 0.5);
+
+        buffer[i + 1] = ((buffer[i + 1] - ((maxValue) / 2)) *2 ) + ((maxValue) / 2);
+
+        buffer[i + 1] = ((buffer[i + 1] + buffer[i + 1 - sampleDelay]) * 0.5);
 
       }
 

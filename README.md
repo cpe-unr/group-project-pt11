@@ -11,6 +11,9 @@
 - Zachary Poole: Wav Processing, File I/O
 
 ## Design
+
+![UML Diagram](pt11-uml.png)
+
 The Wav functions serve to read and write specific data from the given audio files. The User Interface allows the user to choose which processor to run, designation of processed audio file, and whether or not they want to export a CSV file. The Echo, Noise Gate, and Normalization classes serve to execute separate processor functionalities.
 
 ## Challenges

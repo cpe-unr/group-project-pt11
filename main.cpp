@@ -7,6 +7,7 @@
 #include <vector>
 #include <algorithm>
 #include "wav.h"
+#include "menus.h"
 
 int main(int argc, char *argv[])
 {
@@ -87,10 +88,14 @@ int main(int argc, char *argv[])
     std::cout << wavFiles[i].getNumChannels() << std::endl;
     //std::cout << "worked" << std::endl;
   }
-  std::cout << "works here" << std::endl;
+  //std::cout << "works here" << std::endl;
 
 
-  std::cout << wavFiles[1].getNumChannels() << std::endl;
+  //std::cout << wavFiles[1].getNumChannels() << std::endl;
 
+  // main menu
+  Menus menu;
+
+  menu.displayMainMenu();
 
 }

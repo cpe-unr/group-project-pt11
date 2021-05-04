@@ -1,6 +1,13 @@
 #ifndef WAVEHEADER_H
 #define WAVEHEADER_H
 
+
+/**
+ * @brief The wavHeader struct
+ * 
+ * This struct contains most of the data that was read in from the wav file, which is all read through the functions in the wav class.
+ * 
+ */
 typedef struct wavHeader {
 
 

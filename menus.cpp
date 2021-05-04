@@ -1,7 +1,6 @@
 #include "menus.h"
-#include <iostream>
 
-void Menus::displayMainMenu() {
+void Menus::displayMainMenu(std::vector<std::string> wavFileNames, std::vector<Wav> wavFiles) {
 
   int mainMenuVar;
 
@@ -19,7 +18,7 @@ void Menus::displayMainMenu() {
 
     switch (mainMenuVar) {
       case 1: // wav processing
-              displayWavMenu();
+              displayWavMenu(wavFileNames, wavFiles);
               break;
       
       case 2: // metadata
@@ -38,7 +37,23 @@ void Menus::displayMainMenu() {
 
 }
 
-void Menus::displayWavMenu() {
+void Menus::displayWavMenu(std::vector<std::string> wavFileNames, std::vector<Wav> wavFiles) {
+
+  int userInput;
+
+  std::cout << "Which file would you like to modify?" << std::endl;
+
+  for(int i = 0; i < wavFileNames.size(); i++) {
+    std::cout << i + 1 << ". " << wavFileNames[i] << std::endl;
+  }
+
+  std::cin >> userInput;
+  displayEffectsMenu(wavFileNames[userInput], wavFiles[userInput], wavFileNames);
+
+}
+
+
+void Menus::displayEffectsMenu(std::string wavFileName, Wav wavFile, std::vector<std::string> wavFileNames) {
 
   int userInput;
   do {
@@ -47,24 +62,32 @@ void Menus::displayWavMenu() {
     std::cout << "1. Echo" << std::endl;
     std::cout << "2. Normalization" << std::endl;
     std::cout << "3. Noise Gate" << std::endl;
-    std::cout << "0. Exit" << std::endl;
+    std::cout << "0. Save and Exit" << std::endl;
 
     std::cin >> userInput;
 
     std::cout << std::endl;
 
+    Processor processor;
+
     switch(userInput) {
 
       case 1: // echo
+              processor.processNoiseGate(wavFile.get8BitBuffer(), wavFile.getBufferSize(), wavFile.getNumChannels());
               break;
 
       case 2: // normalization
+              processor.processNormalization(wavFile.get8BitBuffer(), wavFile.getBufferSize());
               break;
 
       case 3: // noise gate
+              processor.processEcho(wavFile.get8BitBuffer(), wavFile.getBufferSize(), wavFile.getNumChannels());
               break;
 
-      case 0: // exit
+      case 0: // save and exit
+              std::string fileName;
+              wavFile.checkIfFileExists(wavFileNames);
+              wavFile.writeFile(fileName);
               break;
 
     }

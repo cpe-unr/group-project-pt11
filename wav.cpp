@@ -11,15 +11,48 @@ void Wav::readFile(const std::string fileName) {
 		buffer = new unsigned char[wavHeader.data_bytes];
 		file.read((char*)buffer, wavHeader.data_bytes);
 		file.close();
+
+		if(wavHeader.bit_depth == 16) {
+			shortBuffer = reinterpret_cast<short*>(buffer);
+		}
 	}
-	
-	//short* shortBuffer = reinterpret_cast<short*>(buffer);
-	//short val = shortBuffer[0]; //for 16 bit
+}
+
+std::string Wav::checkIfFileExists(std::vector<std::string> wavFileNames) {
+
+	std::cout << "Please enter a filename: " << std::endl;
+
+	std::string fileName;
+	std::cin >> fileName;
+
+	int index = 0;
+	int endLoop = 0;
+	do {
+
+		if(fileName == wavFileNames[index] && index < wavFileNames.size()) {
+			std::cout << "That filename is already taken, please choose another one." << std::endl;
+			std::cin >> fileName;
+		}
+		else if(fileName != wavFileNames[index] && index < wavFileNames.size()) {
+			index++;
+		}
+		else {
+			endLoop = 1;
+		}
+
+	} while(endLoop != 1);
+
+	return fileName;
+
 }
 
 // returns value of buffer
-unsigned char *Wav::getBuffer(){
-    return buffer;
+unsigned char *Wav::get8BitBuffer(){
+	return buffer;
+}
+
+short *Wav::get16BitBuffer() {
+	return shortBuffer;
 }
 
 // writes data to new wav file

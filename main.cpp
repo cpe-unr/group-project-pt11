@@ -60,42 +60,22 @@ int main(int argc, char *argv[])
 
       if (splicedString == ".wav")
       {
-        std::cout << fileNames[i] << std::endl;
+        //std::cout << fileNames[i] << std::endl;
         std::string tempStr =  std::string(argvStr + "/" + fileNames[i]);
         wavFileNames.push_back(tempStr);
-        //std::cout << "works here" << std::endl;
       }
     }
   }
 
-  std::cout << "file names" << std::endl;
-  for (int i = 0; i < wavFileNames.size(); i++)
-  {
-    std::cout << wavFileNames[i] << std::endl;
-  }
-
-  Wav test;
-  test.readFile("waves/yes-8-bit-stereo.wav");
-  std::cout << "worked here" << std::endl;
-
   std::vector<Wav> wavFiles;
   std::vector<Wav> testFiles;
   for(int i = 0; i < wavFileNames.size(); i++) {
-    //Wav testFile;
-    //wavFiles.emplace_back(testFile);
     Wav wavFiles[i];
     wavFiles[i].readFile(wavFileNames[i]);
-    std::cout << wavFiles[i].getNumChannels() << std::endl;
-    //std::cout << "worked" << std::endl;
   }
-  //std::cout << "works here" << std::endl;
-
-
-  //std::cout << wavFiles[1].getNumChannels() << std::endl;
-
   // main menu
   Menus menu;
 
-  menu.displayMainMenu();
+  menu.displayMainMenu(wavFileNames, wavFiles);
 
 }

@@ -1,0 +1,200 @@
+\hypertarget{class_wav}{}\doxysection{Wav Class Reference}
+\label{class_wav}\index{Wav@{Wav}}
+
+
+The wav class.  
+
+
+
+
+{\ttfamily \#include $<$wav.\+h$>$}
+
+Inheritance diagram for Wav\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d5d/class_wav}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wav_a23e1700f87bc1b794819be1f819b7272}{Wav}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_wav}{Wav}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_wav_a709e9d341155e8d97767a1975bf82f00}{Wav}} (const \mbox{\hyperlink{class_wav}{Wav}} \&obj)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_wav}{Wav}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wav_a9c6e8e7e451e87aacb814ba231739d33}{read\+File}} (const std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Reads a wav file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wav_a36bb85fb0d67558fc09a8f28ada21fc0}{write\+File}} (const std\+::string \&out\+File\+Name) override
+\begin{DoxyCompactList}\small\item\em Writes out a wav file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_wav_a25839f5e81cc0a082a39341d12ad4e52}{check\+If\+File\+Exists}} (std\+::vector$<$ std\+::string $>$ wav\+File\+Names) override
+\begin{DoxyCompactList}\small\item\em Checks if a file already exists. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_wav_a1510b246ba121b103a60b8e7839af25f}{$\sim$\+Wav}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_wav}{Wav}} object. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \mbox{\hyperlink{class_wav_af43d4432a8d43c65fe8dba6a9c486a50}{get8\+Bit\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the 8-\/bit buffer. \end{DoxyCompactList}\item 
+short $\ast$ \mbox{\hyperlink{class_wav_aab9675b7f5f359e64157c7a94d929eaa}{get16\+Bit\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the 16-\/bit buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_wav_a71fdfa1d9f5e7c1b86f07bbff4249dca}{get\+Buffer\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the Buffer Size object. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{class_wav_aaeb55047d4ebf44afc26b7c7940c221f}{get\+Num\+Channels}} () const
+\begin{DoxyCompactList}\small\item\em Get the Num Channels object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The wav class. 
+
+This class contains all the functions related to the wav file (excluding anything metadata related, I didn\textquotesingle{}t have time). It inherits from the \mbox{\hyperlink{class_i_save_file}{ISave\+File}} class and overrides the write\+File and check\+If\+File\+Exists functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_wav_a23e1700f87bc1b794819be1f819b7272}\label{class_wav_a23e1700f87bc1b794819be1f819b7272}} 
+\index{Wav@{Wav}!Wav@{Wav}}
+\index{Wav@{Wav}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{Wav()}{Wav()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wav\+::\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_wav}{Wav}} object. 
+
+Default constructor. \mbox{\Hypertarget{class_wav_a709e9d341155e8d97767a1975bf82f00}\label{class_wav_a709e9d341155e8d97767a1975bf82f00}} 
+\index{Wav@{Wav}!Wav@{Wav}}
+\index{Wav@{Wav}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{Wav()}{Wav()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wav\+::\+Wav (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wav}{Wav}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_wav}{Wav}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Another wav object\\
+\hline
+\end{DoxyParams}
+Copy constructor. \mbox{\Hypertarget{class_wav_a1510b246ba121b103a60b8e7839af25f}\label{class_wav_a1510b246ba121b103a60b8e7839af25f}} 
+\index{Wav@{Wav}!````~Wav@{$\sim$Wav}}
+\index{````~Wav@{$\sim$Wav}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wav()}{~Wav()}}
+{\footnotesize\ttfamily Wav\+::$\sim$\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_wav}{Wav}} object. 
+
+Default destructor (only destructor). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_wav_a25839f5e81cc0a082a39341d12ad4e52}\label{class_wav_a25839f5e81cc0a082a39341d12ad4e52}} 
+\index{Wav@{Wav}!checkIfFileExists@{checkIfFileExists}}
+\index{checkIfFileExists@{checkIfFileExists}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{checkIfFileExists()}{checkIfFileExists()}}
+{\footnotesize\ttfamily std\+::string Wav\+::check\+If\+File\+Exists (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{wav\+File\+Names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if a file already exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav\+File\+Names} & The vector of wav file names \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string Returns an acceptable file name
+\end{DoxyReturn}
+This function asks the user for a file name, and checks if that file already exists. If it doesn\textquotesingle{}t already exist, it will return the file name. 
+
+Implements \mbox{\hyperlink{class_i_save_file}{ISave\+File}}.
+
+\mbox{\Hypertarget{class_wav_aab9675b7f5f359e64157c7a94d929eaa}\label{class_wav_aab9675b7f5f359e64157c7a94d929eaa}} 
+\index{Wav@{Wav}!get16BitBuffer@{get16BitBuffer}}
+\index{get16BitBuffer@{get16BitBuffer}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{get16BitBuffer()}{get16BitBuffer()}}
+{\footnotesize\ttfamily short $\ast$ Wav\+::get16\+Bit\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the 16-\/bit buffer. 
+
+\begin{DoxyReturn}{Returns}
+short$\ast$ The 16-\/bit buffer
+\end{DoxyReturn}
+This function returns the 16-\/bit buffer (as a short$\ast$) \mbox{\Hypertarget{class_wav_af43d4432a8d43c65fe8dba6a9c486a50}\label{class_wav_af43d4432a8d43c65fe8dba6a9c486a50}} 
+\index{Wav@{Wav}!get8BitBuffer@{get8BitBuffer}}
+\index{get8BitBuffer@{get8BitBuffer}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{get8BitBuffer()}{get8BitBuffer()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Wav\+::get8\+Bit\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the 8-\/bit buffer. 
+
+\begin{DoxyReturn}{Returns}
+unsigned char$\ast$ The 8-\/bit buffer
+\end{DoxyReturn}
+This function returns the 8-\/bit buffer (as an unsigned char $\ast$). \mbox{\Hypertarget{class_wav_a71fdfa1d9f5e7c1b86f07bbff4249dca}\label{class_wav_a71fdfa1d9f5e7c1b86f07bbff4249dca}} 
+\index{Wav@{Wav}!getBufferSize@{getBufferSize}}
+\index{getBufferSize@{getBufferSize}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{getBufferSize()}{getBufferSize()}}
+{\footnotesize\ttfamily int Wav\+::get\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Buffer Size object. 
+
+\begin{DoxyReturn}{Returns}
+int The size of the buffer
+\end{DoxyReturn}
+This function gets the size of the buffer, which is then used for a lot of for loops. \mbox{\Hypertarget{class_wav_aaeb55047d4ebf44afc26b7c7940c221f}\label{class_wav_aaeb55047d4ebf44afc26b7c7940c221f}} 
+\index{Wav@{Wav}!getNumChannels@{getNumChannels}}
+\index{getNumChannels@{getNumChannels}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{getNumChannels()}{getNumChannels()}}
+{\footnotesize\ttfamily short Wav\+::get\+Num\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Num Channels object. 
+
+\begin{DoxyReturn}{Returns}
+short The number of channels
+\end{DoxyReturn}
+This function gets the number of channels in the buffer (1 for mono, 2 for stereo). \mbox{\Hypertarget{class_wav_a9c6e8e7e451e87aacb814ba231739d33}\label{class_wav_a9c6e8e7e451e87aacb814ba231739d33}} 
+\index{Wav@{Wav}!readFile@{readFile}}
+\index{readFile@{readFile}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily void Wav\+::read\+File (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Reads a wav file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the wav file\\
+\hline
+\end{DoxyParams}
+This function is given a filename, and it reads the file and inserts the data into the wav object. \mbox{\Hypertarget{class_wav_a36bb85fb0d67558fc09a8f28ada21fc0}\label{class_wav_a36bb85fb0d67558fc09a8f28ada21fc0}} 
+\index{Wav@{Wav}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!Wav@{Wav}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily void Wav\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes out a wav file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & The desired file name\\
+\hline
+\end{DoxyParams}
+This function is given a desired file name, and it takes the info from the wav object and writes it to a new file. 
+
+Implements \mbox{\hyperlink{class_i_save_file}{ISave\+File}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wav.\+h\item 
+wav.\+cpp\end{DoxyCompactItemize}

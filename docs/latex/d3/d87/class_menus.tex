@@ -1,0 +1,109 @@
+\hypertarget{class_menus}{}\doxysection{Menus Class Reference}
+\label{class_menus}\index{Menus@{Menus}}
+
+
+This class contains the functions pretty much all of the user interaction.  
+
+
+
+
+{\ttfamily \#include $<$menus.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_menus_aa636ae0e60e2167bcd942b72580f30c3}{display\+Main\+Menu}} (std\+::vector$<$ std\+::string $>$ wav\+File\+Names, std\+::vector$<$ \mbox{\hyperlink{class_wav}{Wav}} $>$ wav\+Files)
+\begin{DoxyCompactList}\small\item\em This function displays the main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menus_a23440d3a533ce236d57181193244a26d}{display\+Wav\+Menu}} (std\+::vector$<$ std\+::string $>$ wav\+File\+Names, std\+::vector$<$ \mbox{\hyperlink{class_wav}{Wav}} $>$ wav\+Files)
+\begin{DoxyCompactList}\small\item\em This function displays the menu for choosing a wav file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menus_ab0454271e787f468cafa49e0f27dc180}{display\+Effects\+Menu}} (std\+::string wav\+File\+Name, \mbox{\hyperlink{class_wav}{Wav}} wav\+File, std\+::vector$<$ std\+::string $>$ wav\+File\+Names)
+\begin{DoxyCompactList}\small\item\em This function displays the menu for choosing which effect to apply to the wav file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menus_ab30114133b363bb424e67253651f5746}{display\+Metadata\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em The function to display the metadata menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menus_ae8ab144bffb03bb91e272c9c0e7b63e4}{display\+CSVMenu}} ()
+\begin{DoxyCompactList}\small\item\em The function to display the CSV menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class contains the functions pretty much all of the user interaction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menus_ae8ab144bffb03bb91e272c9c0e7b63e4}\label{class_menus_ae8ab144bffb03bb91e272c9c0e7b63e4}} 
+\index{Menus@{Menus}!displayCSVMenu@{displayCSVMenu}}
+\index{displayCSVMenu@{displayCSVMenu}!Menus@{Menus}}
+\doxysubsubsection{\texorpdfstring{displayCSVMenu()}{displayCSVMenu()}}
+{\footnotesize\ttfamily void Menus\+::display\+CSVMenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function to display the CSV menu. 
+
+Right now this function does nothing. If I had more time, I would make it so that this function displays the menu for printing the CSV file. \mbox{\Hypertarget{class_menus_ab0454271e787f468cafa49e0f27dc180}\label{class_menus_ab0454271e787f468cafa49e0f27dc180}} 
+\index{Menus@{Menus}!displayEffectsMenu@{displayEffectsMenu}}
+\index{displayEffectsMenu@{displayEffectsMenu}!Menus@{Menus}}
+\doxysubsubsection{\texorpdfstring{displayEffectsMenu()}{displayEffectsMenu()}}
+{\footnotesize\ttfamily void Menus\+::display\+Effects\+Menu (\begin{DoxyParamCaption}\item[{std\+::string}]{wav\+File\+Name,  }\item[{\mbox{\hyperlink{class_wav}{Wav}}}]{wav\+File,  }\item[{std\+::vector$<$ std\+::string $>$}]{wav\+File\+Names }\end{DoxyParamCaption})}
+
+
+
+This function displays the menu for choosing which effect to apply to the wav file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav\+File\+Name} & The name of the wav file to modify \\
+\hline
+{\em wav\+File} & The wav file to modify \\
+\hline
+{\em wav\+File\+Names} & The vector of wav file names\\
+\hline
+\end{DoxyParams}
+This function displays the menu asking the user which effect they want to apply to the wav file. Based off of the user input, it calls the appropriate function to edit the wav file. \mbox{\Hypertarget{class_menus_aa636ae0e60e2167bcd942b72580f30c3}\label{class_menus_aa636ae0e60e2167bcd942b72580f30c3}} 
+\index{Menus@{Menus}!displayMainMenu@{displayMainMenu}}
+\index{displayMainMenu@{displayMainMenu}!Menus@{Menus}}
+\doxysubsubsection{\texorpdfstring{displayMainMenu()}{displayMainMenu()}}
+{\footnotesize\ttfamily void Menus\+::display\+Main\+Menu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{wav\+File\+Names,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_wav}{Wav}} $>$}]{wav\+Files }\end{DoxyParamCaption})}
+
+
+
+This function displays the main menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav\+File\+Names} & The vector of wav file names \\
+\hline
+{\em wav\+Files} & The vector of wav files\\
+\hline
+\end{DoxyParams}
+This function displays the main menu, receives user input, and directs them to another menu based off of that input \mbox{\Hypertarget{class_menus_ab30114133b363bb424e67253651f5746}\label{class_menus_ab30114133b363bb424e67253651f5746}} 
+\index{Menus@{Menus}!displayMetadataMenu@{displayMetadataMenu}}
+\index{displayMetadataMenu@{displayMetadataMenu}!Menus@{Menus}}
+\doxysubsubsection{\texorpdfstring{displayMetadataMenu()}{displayMetadataMenu()}}
+{\footnotesize\ttfamily void Menus\+::display\+Metadata\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function to display the metadata menu. 
+
+Right now this function does nothing. If I had more time I would make it so that this function displays the metadata menu, and based off of user input calls the function that they need to edit the metadata. \mbox{\Hypertarget{class_menus_a23440d3a533ce236d57181193244a26d}\label{class_menus_a23440d3a533ce236d57181193244a26d}} 
+\index{Menus@{Menus}!displayWavMenu@{displayWavMenu}}
+\index{displayWavMenu@{displayWavMenu}!Menus@{Menus}}
+\doxysubsubsection{\texorpdfstring{displayWavMenu()}{displayWavMenu()}}
+{\footnotesize\ttfamily void Menus\+::display\+Wav\+Menu (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{wav\+File\+Names,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_wav}{Wav}} $>$}]{wav\+Files }\end{DoxyParamCaption})}
+
+
+
+This function displays the menu for choosing a wav file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav\+File\+Names} & The vector of wav file names \\
+\hline
+{\em wav\+Files} & The vector of wav files\\
+\hline
+\end{DoxyParams}
+This function displays the wav menu, receives user input, and directs them to another menu based off of that input 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+menus.\+h\item 
+menus.\+cpp\end{DoxyCompactItemize}

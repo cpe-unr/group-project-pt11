@@ -1,0 +1,86 @@
+\hypertarget{class_normalization}{}\doxysection{Normalization Class Reference}
+\label{class_normalization}\index{Normalization@{Normalization}}
+
+
+The class for normalization.  
+
+
+
+
+{\ttfamily \#include $<$normalization.\+h$>$}
+
+Inheritance diagram for Normalization\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/df4/class_normalization}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_normalization_a724a3e8f4a639c5a387e16cfc1283312}{Normalization}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_normalization}{Normalization}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_normalization_af1435f572ca4cd9a93b59c750588a235}{$\sim$\+Normalization}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_normalization}{Normalization}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename buffer\+Type $>$ }\\void \mbox{\hyperlink{class_normalization_ac72a730815649ef707ffe3928d5f8274}{process\+Normalization}} (buffer\+Type $\ast$buffer, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Normalizes the audio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class for normalization. 
+
+This class contains all of the functions needed to normalize the audio of a given wav file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_normalization_a724a3e8f4a639c5a387e16cfc1283312}\label{class_normalization_a724a3e8f4a639c5a387e16cfc1283312}} 
+\index{Normalization@{Normalization}!Normalization@{Normalization}}
+\index{Normalization@{Normalization}!Normalization@{Normalization}}
+\doxysubsubsection{\texorpdfstring{Normalization()}{Normalization()}}
+{\footnotesize\ttfamily Normalization\+::\+Normalization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_normalization}{Normalization}} object. 
+
+Default constructor (only constructor) \mbox{\Hypertarget{class_normalization_af1435f572ca4cd9a93b59c750588a235}\label{class_normalization_af1435f572ca4cd9a93b59c750588a235}} 
+\index{Normalization@{Normalization}!````~Normalization@{$\sim$Normalization}}
+\index{````~Normalization@{$\sim$Normalization}!Normalization@{Normalization}}
+\doxysubsubsection{\texorpdfstring{$\sim$Normalization()}{~Normalization()}}
+{\footnotesize\ttfamily Normalization\+::$\sim$\+Normalization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_normalization}{Normalization}} object. 
+
+Default destructor (only destructor) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_normalization_ac72a730815649ef707ffe3928d5f8274}\label{class_normalization_ac72a730815649ef707ffe3928d5f8274}} 
+\index{Normalization@{Normalization}!processNormalization@{processNormalization}}
+\index{processNormalization@{processNormalization}!Normalization@{Normalization}}
+\doxysubsubsection{\texorpdfstring{processNormalization()}{processNormalization()}}
+{\footnotesize\ttfamily template$<$typename buffer\+Type $>$ \\
+void Normalization\+::process\+Normalization (\begin{DoxyParamCaption}\item[{buffer\+Type $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Normalizes the audio. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em buffer\+Type} & The type of buffer (unsigned char $\ast$ for 8-\/bit and short$\ast$ for 16-\/bit) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer of the wav file \\
+\hline
+{\em buffer\+Size} & The size of the buffer\\
+\hline
+\end{DoxyParams}
+Multiplies each value in the buffer by the new max value / the current max value 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{normalization_8h}{normalization.\+h}}\item 
+\mbox{\hyperlink{normalization_8cpp}{normalization.\+cpp}}\end{DoxyCompactItemize}

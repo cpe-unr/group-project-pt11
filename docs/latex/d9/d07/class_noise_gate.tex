@@ -1,0 +1,88 @@
+\hypertarget{class_noise_gate}{}\doxysection{Noise\+Gate Class Reference}
+\label{class_noise_gate}\index{NoiseGate@{NoiseGate}}
+
+
+The class for the noise gate.  
+
+
+
+
+{\ttfamily \#include $<$noise\+Gate.\+h$>$}
+
+Inheritance diagram for Noise\+Gate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d07/class_noise_gate}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_noise_gate_a443adb786ffe6d55496f945da4ed86b6}{Noise\+Gate}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new Noise Gate object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_noise_gate_abcdf1888710c86086b1a595189191afd}{$\sim$\+Noise\+Gate}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Noise Gate object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename buffer\+Type $>$ }\\void \mbox{\hyperlink{class_noise_gate_ae8245ad019e161ba7a2ef6cbd7dfb682}{process\+Noise\+Gate}} (buffer\+Type $\ast$buffer, int buffer\+Size, int num\+Channels)
+\begin{DoxyCompactList}\small\item\em Adds the noise gate effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class for the noise gate. 
+
+This class contains all the functions needed to add a noise gate to a supplied wav file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_noise_gate_a443adb786ffe6d55496f945da4ed86b6}\label{class_noise_gate_a443adb786ffe6d55496f945da4ed86b6}} 
+\index{NoiseGate@{NoiseGate}!NoiseGate@{NoiseGate}}
+\index{NoiseGate@{NoiseGate}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{NoiseGate()}{NoiseGate()}}
+{\footnotesize\ttfamily Noise\+Gate\+::\+Noise\+Gate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new Noise Gate object. 
+
+Default constructor (only constructor). \mbox{\Hypertarget{class_noise_gate_abcdf1888710c86086b1a595189191afd}\label{class_noise_gate_abcdf1888710c86086b1a595189191afd}} 
+\index{NoiseGate@{NoiseGate}!````~NoiseGate@{$\sim$NoiseGate}}
+\index{````~NoiseGate@{$\sim$NoiseGate}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{$\sim$NoiseGate()}{~NoiseGate()}}
+{\footnotesize\ttfamily Noise\+Gate\+::$\sim$\+Noise\+Gate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the Noise Gate object. 
+
+Default destructor (only destructor) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_noise_gate_ae8245ad019e161ba7a2ef6cbd7dfb682}\label{class_noise_gate_ae8245ad019e161ba7a2ef6cbd7dfb682}} 
+\index{NoiseGate@{NoiseGate}!processNoiseGate@{processNoiseGate}}
+\index{processNoiseGate@{processNoiseGate}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{processNoiseGate()}{processNoiseGate()}}
+{\footnotesize\ttfamily template$<$typename buffer\+Type $>$ \\
+void Noise\+Gate\+::process\+Noise\+Gate (\begin{DoxyParamCaption}\item[{buffer\+Type $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds the noise gate effect. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em buffer\+Type} & The type of buffer (unsigned char $\ast$ for 8-\/bit and short$\ast$ for 16-\/bit) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer of the wav file \\
+\hline
+{\em buffer\+Size} & The size of the buffer \\
+\hline
+{\em num\+Channels} & The number of channels (1 for mono, 2 for stereo)\\
+\hline
+\end{DoxyParams}
+This function looks for values below a certain threshold, and sets the values to zero if they fall under it. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{noise_gate_8h}{noise\+Gate.\+h}}\item 
+\mbox{\hyperlink{noise_gate_8cpp}{noise\+Gate.\+cpp}}\end{DoxyCompactItemize}

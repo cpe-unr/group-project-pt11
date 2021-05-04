@@ -1,0 +1,111 @@
+\hypertarget{class_echo}{}\doxysection{Echo Class Reference}
+\label{class_echo}\index{Echo@{Echo}}
+
+
+The class for the echo effect.  
+
+
+
+
+{\ttfamily \#include $<$echo.\+h$>$}
+
+Inheritance diagram for Echo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/dcc/class_echo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_echo_a813084d3f6368f7e94d3f2578f7bf785}{Echo}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_echo}{Echo}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_echo_a99d64c31c8c87dc12ffe320e02bea575}{Echo}} (int sample\+Delay)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_echo}{Echo}} object (with parameters) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_echo_a03c51e9ff426744f7ae68a9aac8614c8}{$\sim$\+Echo}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_echo}{Echo}} object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename buffer\+Type $>$ }\\void \mbox{\hyperlink{class_echo_a8ed78c32d407f88f4aeb331bc2e121cb}{process\+Echo}} (buffer\+Type $\ast$buffer, int buffer\+Size, int num\+Channels)
+\begin{DoxyCompactList}\small\item\em Adds the echo (echo, echo) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_echo_a497040ee1842607692259ef29d5af3c5}\label{class_echo_a497040ee1842607692259ef29d5af3c5}} 
+int {\bfseries sample\+Delay}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class for the echo effect. 
+
+This class contains all of the functions needed to implement the echo effect on a given wav file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_echo_a813084d3f6368f7e94d3f2578f7bf785}\label{class_echo_a813084d3f6368f7e94d3f2578f7bf785}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_echo}{Echo}} object. 
+
+Default constructor. \mbox{\Hypertarget{class_echo_a99d64c31c8c87dc12ffe320e02bea575}\label{class_echo_a99d64c31c8c87dc12ffe320e02bea575}} 
+\index{Echo@{Echo}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Echo\+::\+Echo (\begin{DoxyParamCaption}\item[{int}]{sample\+Delay }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_echo}{Echo}} object (with parameters) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample\+Delay} & The desired echo delay (in samples, not seconds).\\
+\hline
+\end{DoxyParams}
+Paramaterized constructor. \mbox{\Hypertarget{class_echo_a03c51e9ff426744f7ae68a9aac8614c8}\label{class_echo_a03c51e9ff426744f7ae68a9aac8614c8}} 
+\index{Echo@{Echo}!````~Echo@{$\sim$Echo}}
+\index{````~Echo@{$\sim$Echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Echo()}{~Echo()}}
+{\footnotesize\ttfamily Echo\+::$\sim$\+Echo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_echo}{Echo}} object. 
+
+Default destructor (the only destructor). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_echo_a8ed78c32d407f88f4aeb331bc2e121cb}\label{class_echo_a8ed78c32d407f88f4aeb331bc2e121cb}} 
+\index{Echo@{Echo}!processEcho@{processEcho}}
+\index{processEcho@{processEcho}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{processEcho()}{processEcho()}}
+{\footnotesize\ttfamily template$<$typename buffer\+Type $>$ \\
+void Echo\+::process\+Echo (\begin{DoxyParamCaption}\item[{buffer\+Type $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds the echo (echo, echo) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em buffer\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+{\em num\+Channels} & This program creates an echo by adding together an older buffer value with one further in the file, then making sure it\textquotesingle{}s not blasting the volume by limiting the value with the maximum allowable value in the specified type. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{echo_8h}{echo.\+h}}\item 
+\mbox{\hyperlink{echo_8cpp}{echo.\+cpp}}\end{DoxyCompactItemize}
